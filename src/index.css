@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CFO Pilot Design System - All colors in HSL */
+
+@layer base {
+  :root {
+    /* Primary Green */
+    --primary: 145 80% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Deep Green */
+    --deep-green: 151 82% 26%;
+    
+    /* Dark Navy */
+    --navy: 218 54% 9%;
+    --navy-light: 219 33% 19%;
+    
+    /* Backgrounds */
+    --background: 0 0% 100%;
+    --foreground: 218 54% 9%;
+    
+    /* Light Background */
+    --light-bg: 210 40% 98%;
+    
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 218 54% 9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 54% 9%;
+    
+    /* Secondary Text */
+    --secondary: 215 14% 34%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 14% 34%;
+    
+    --accent: 145 80% 40%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 145 80% 40%;
+    
+    --radius: 0.75rem;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 218 54% 9%;
+    --foreground: 0 0% 100%;
+    
+    --card: 219 33% 15%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 219 33% 15%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 145 80% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 215 14% 60%;
+    --secondary-foreground: 218 54% 9%;
+    
+    --muted: 219 33% 19%;
+    --muted-foreground: 215 14% 60%;
+    
+    --accent: 145 80% 40%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 219 33% 25%;
+    --input: 219 33% 25%;
+    --ring: 145 80% 40%;
+    
+    --sidebar-background: 218 54% 9%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 145 80% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 219 33% 19%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 219 33% 25%;
+    --sidebar-ring: 145 80% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-navy {
+    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
+  }
+  
+  .gradient-green {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--deep-green)) 100%);
+  }
+}
